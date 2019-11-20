@@ -8,7 +8,7 @@
 main {
     width: 100vw;
     height: 100vh;
-    background-image: url(img/starry-sky-2051448_1920.jpg);
+    background-image: url(img/clouds-984175_1920.jpg);
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
@@ -23,16 +23,18 @@ main {
 }
 
 .wrapper {
-    margin: 0 auto;
+    margin-left: 10rem;
     width: 50rem;
-    /* background-color: #C0C0C0; */
-    /* opacity: 0.8; */
+    background-color: #C0C0C0;
+    opacity: 0.5;
+    border-radius: 40px;
 }
 
 .wrapper p {
     text-align: center;
+    padding: 2rem;
     font-size: 5rem;
-    color: white;
+    color: black;
 }
 
 .img {
@@ -40,12 +42,18 @@ main {
 }
 
 .fiveDaysWeather {
+    padding: 5rem;
+    position: relative;
+    top: -58rem;
+    right: -80rem;
     margin-top: 10rem;
-    /* margin-left: 5rem;
-    margin-right: 5rem; */
-    width: 100%;
+    width: 50vw;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    background-color: #C0C0C0;
+    opacity: 0.5;
+    border-radius: 40px;
 }
 
 .picture {
@@ -54,6 +62,31 @@ main {
 }
 
 .fiveDaysWeather p {
-    color: white;
+    color: black;
     font-size: 3rem;
+}
+
+.firstDay {
+    display: flex;
+    justify-content: space-between;
+}
+
+.secondDay {
+    display: flex;
+    justify-content: space-between;
+}
+
+.thirdDay {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fourthDay {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fifthDay {
+    display: flex;
+    justify-content: space-between;
 }
