@@ -6,7 +6,7 @@
 }
 
 main {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-image: url(img/starry-sky-2051448_1920.jpg);
     background-size: cover;
@@ -14,9 +14,14 @@ main {
     background-repeat: no-repeat;
 }
 
+.todayWeather {
+    height: 70vh;
+}
+
 .todayWeather h1 {
+    font-family: 'Arimo', sans-serif;
     padding-top: 10rem;
-    padding-bottom: 5rem;
+    padding-bottom: 3rem;
     color: white;
     font-size: 5rem;
     text-align: center;
@@ -25,14 +30,37 @@ main {
 .wrapper {
     margin: 0 auto;
     width: 50rem;
-    /* background-color: #C0C0C0; */
-    /* opacity: 0.8; */
+    height: 40rem;
+    background-color: white;
+    opacity: 0.5;
+    border-radius: 20px;
+    position: relative;
 }
 
-.wrapper p {
+.wrapperContent {
+    position: relative;
+    top: -40rem;
+}
+
+.wrapperContent p:nth-child(1) {
+    padding-top: 1rem;
+}
+
+.wrapperContent p:nth-child(4) {
+    font-size: 4rem;
+}
+
+.wrapperContent p:nth-child(5) {
+    padding-bottom: 1rem;
+}
+
+.wrapperContent p {
+    font-family: 'Arimo', sans-serif;
+    margin-top: 2rem;
     text-align: center;
-    font-size: 5rem;
-    color: white;
+    font-size: 3rem;
+    color: black;
+    font-weight: bold
 }
 
 .img {
@@ -40,9 +68,12 @@ main {
 }
 
 .fiveDaysWeather {
-    margin-top: 10rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     /* margin-left: 5rem;
     margin-right: 5rem; */
+    background-color: #fff;
+    opacity: 0.5;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -54,6 +85,12 @@ main {
 }
 
 .fiveDaysWeather p {
-    color: white;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    color: black;
     font-size: 3rem;
+}
+
+.fiveDaysWeather .degrees {
+    font-size: 4rem;
 }
