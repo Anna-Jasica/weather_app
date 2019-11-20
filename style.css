@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/starry-sky-2051448_1920.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.todayWeather h1 {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 50rem;
+    /* background-color: #C0C0C0; */
+    /* opacity: 0.8; */
+}
+
+.wrapper p {
+    text-align: center;
+    font-size: 5rem;
+    color: white;
+}
+
+.img {
+    height: 10rem;
+}
+
+.fiveDaysWeather {
+    margin-top: 10rem;
+    /* margin-left: 5rem;
+    margin-right: 5rem; */
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.picture {
+    color: red;
+    height: 5rem;
+}
+
+.fiveDaysWeather p {
+    color: white;
+    font-size: 3rem;
+}
