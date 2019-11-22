@@ -123,7 +123,7 @@ main {
     width: 50rem;
     height: 40rem;
     background-color: white;
-    opacity: 0.5;
+    opacity: 0.8;
     border-radius: 20px;
     position: relative;
 }
@@ -154,8 +154,9 @@ main {
     font-weight: bold
 }
 
-.img {
-    height: 10rem;
+div .img {
+    display: flex;
+    justify-content: center;
 }
 
 .fiveDaysWeather {
@@ -164,7 +165,7 @@ main {
     /* margin-left: 5rem;
     margin-right: 5rem; */
     background-color: #fff;
-    opacity: 0.5;
+    opacity: 0.8;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -172,10 +173,13 @@ main {
 
 .picture {
     color: red;
-    height: 5rem;
+    height: 3rem;
+    position: relative;
+    top: -3rem
 }
 
 .fiveDaysWeather p {
+    padding-bottom: 2rem;
     font-family: 'Arimo', sans-serif;
     font-weight: bold;
     color: black;
@@ -183,6 +187,7 @@ main {
 }
 
 .fiveDaysWeather .degrees {
+    padding-top: 2rem;
     font-size: 4rem;
     display: flex;
     justify-content: center;
@@ -250,9 +255,9 @@ main {
     .wrapper {
         margin: 0 auto;
         /* width: 50rem; */
-        height: 45rem;
-        /* background-color: white;
-        opacity: 0.5;
+        /* height: 45rem;
+        background-color: white;
+        opacity: 0.8;
         border-radius: 20px;
         position: relative; */
     }
@@ -277,14 +282,15 @@ main {
         /* color: black;
         font-weight: bold */
     }
-    .img {
-        height: 11rem;
+    div .img {
+        display: flex;
+        justify-content: center;
     }
     .fiveDaysWeather {
         padding-top: 2rem;
         padding-bottom: 2rem;
         background-color: #fff;
-        opacity: 0.5;
+        opacity: 0.8;
         width: 100%;
         display: flex;
         justify-content: space-around;
@@ -370,7 +376,7 @@ main {
         /* width: 50rem; */
         height: 40rem;
         /* background-color: white;
-        opacity: 0.5;
+        opacity: 0.8;
         border-radius: 20px;
         position: relative; */
     }
@@ -395,14 +401,15 @@ main {
         /* color: black;
         font-weight: bold */
     }
-    .img {
-        height: 7rem;
+    div .img {
+        display: flex;
+        justify-content: center;
     }
     .fiveDaysWeather {
         padding-top: 2rem;
         padding-bottom: 2rem;
         background-color: #fff;
-        opacity: 0.5;
+        opacity: 0.8;
         width: 100%;
         display: flex;
         justify-content: space-around;
@@ -488,7 +495,7 @@ main {
         /* width: 50rem; */
         height: 35rem;
         /* background-color: white;
-        opacity: 0.5;
+        opacity: 0.8;
         border-radius: 20px;
         position: relative; */
     }
@@ -513,15 +520,16 @@ main {
         /* color: black;
         font-weight: bold */
     }
-    .img {
-        height: 6rem;
+    div .img {
+        display: flex;
+        justify-content: center;
     }
     .fiveDaysWeather {
         margin-top: 2.5rem;
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
         /* background-color: #fff;
-        opacity: 0.5;
+        opacity: 0.8;
         width: 100%;
         display: flex;
         justify-content: space-around; */
@@ -607,7 +615,7 @@ main {
         width: 50rem; */
         height: 35rem;
         /* background-color: white;
-        opacity: 0.5;
+        opacity: 0.8;
         border-radius: 20px;
         position: relative; */
     }
@@ -632,8 +640,9 @@ main {
         /* color: black;
         font-weight: bold */
     }
-    .img {
-        /* height: 10rem; */
+    div .img {
+        display: flex;
+        justify-content: center;
     }
     .fiveDaysWeather {
         padding-top: 2rem;
@@ -641,7 +650,7 @@ main {
         /* margin-left: 5rem;
         margin-right: 5rem; */
         background-color: #fff;
-        opacity: 0.5;
+        opacity: 0.8;
         width: 100%;
         display: flex;
         justify-content: space-around;
@@ -724,7 +733,7 @@ main {
         width: 40rem;
         height: 30rem;
         /* background-color: white;
-        opacity: 0.5;
+        opacity: 0.8;
         border-radius: 20px;
         position: relative; */
     }
@@ -749,8 +758,9 @@ main {
         /* color: black;
         font-weight: bold */
     }
-    .img {
-        height: 7rem;
+    div .img {
+        display: flex;
+        justify-content: center;
     }
     .fiveDaysWeather {
         padding-top: 1.5rem;
@@ -758,7 +768,7 @@ main {
         /* margin-left: 5rem;
         margin-right: 5rem; */
         /* background-color: #fff;
-        opacity: 0.5;
+        opacity: 0.8;
         width: 100%;
         display: flex;
         justify-content: space-around; */
@@ -780,7 +790,7 @@ main {
     }
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:560px) {
     /*styling our show menu button*/
     .show-menu {
         background: #342a2a;
@@ -788,7 +798,7 @@ main {
         cursor: pointer;
         padding: 10px 0;
         justify-content: center;
-        font-size: 1.25rem;
+        font-size: 2rem;
     }
     /*hiding our navigation*/
     .navigation {
@@ -801,7 +811,7 @@ main {
         /* display: block;
         padding: 20px 0;
         color: inherit; */
-        font-size: 1.25rem;
+        font-size: 2rem;
         /* text-decoration: none; */
     }
     /*displaying our list items as block element; if checkbox is check*/
@@ -822,15 +832,15 @@ main {
         flex: 1;
     }
     main {
-        /* width: 100%;
-        height: 100vh;
+        width: 100%;
+        height: 120vh;
         background-image: url(img/starry-sky-2051448_1920.jpg);
         background-size: cover;
         background-position: top center;
-        background-repeat: no-repeat; */
+        background-repeat: no-repeat;
     }
     .todayWeather {
-        height: 40vh;
+        height: 45vh;
     }
     .todayWeather h1 {
         /* font-family: 'Arimo', sans-serif; */
@@ -843,15 +853,15 @@ main {
     .wrapper {
         /* margin: 0 auto; */
         width: 30rem;
-        height: 20rem;
+        height: 25rem;
         /* background-color: white;
-        opacity: 0.5;
+        opacity: 0.8;
         border-radius: 20px;
         position: relative; */
     }
     .wrapperContent {
         /* position: relative; */
-        top: -19rem;
+        top: -24rem;
     }
     .wrapperContent p:nth-child(1) {
         padding-top: 0;
@@ -870,8 +880,12 @@ main {
         /* color: black;
         font-weight: bold */
     }
-    .img {
-        height: 5rem;
+    div .img {
+        display: flex;
+        justify-content: center;
+    }
+    div .img>img {
+        height: 2rem;
     }
     .fiveDaysWeather {
         margin-top: 2rem;
@@ -880,7 +894,7 @@ main {
         margin-left: 0;
         margin-right: 0;
         background-color: #fff;
-        opacity: 0.5;
+        opacity: 0.8;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -963,14 +977,14 @@ main {
         background-repeat: no-repeat; */
     }
     .todayWeather {
-        height: 45vh;
+        height: 40vh;
     }
     .todayWeather h1 {
         /* font-family: 'Arimo', sans-serif; */
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
         /* color: white; */
-        font-size: 3rem;
+        font-size: 2.5rem;
         /* text-align: center; */
     }
     .wrapper {
@@ -978,13 +992,13 @@ main {
         width: 30rem;
         height: 20rem;
         /* background-color: white;
-        opacity: 0.5;
+        opacity: 0.8;
         border-radius: 20px;
         position: relative; */
     }
     .wrapperContent {
         /* position: relative; */
-        top: -19rem;
+        top: -20rem;
     }
     .wrapperContent p:nth-child(1) {
         padding-top: 0;
@@ -997,13 +1011,17 @@ main {
     }
     .wrapperContent p {
         /* font-family: 'Arimo', sans-serif; */
-        margin-top: 0;
+        /* margin-top: 0; */
         /* text-align: center; */
-        font-size: 2.5rem;
+        font-size: 1.5rem;
         /* color: black;
         font-weight: bold */
     }
-    .img {
+    div .img {
+        display: flex;
+        justify-content: center;
+    }
+    .fiveDaysWeather div>img {
         height: 5rem;
     }
     .fiveDaysWeather {
@@ -1012,7 +1030,7 @@ main {
         margin-left: 0;
         margin-right: 0;
         background-color: #fff;
-        opacity: 0.5;
+        opacity: 0.8;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -1023,23 +1041,24 @@ main {
     .thirdDay,
     .fourthDay,
     .fifthDay {
-        padding-top: .5rem;
+        padding-top: 0;
         display: flex;
         justify-content: space-around;
         align-items: center;
+        height: 6rem;
     }
     .picture {
         color: red;
-        height: 4rem;
+        height: 0;
     }
     .fiveDaysWeather p {
         /* font-family: 'Arimo', sans-serif;
         font-weight: bold;
         color: black; */
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     .fiveDaysWeather .degrees {
-        font-size: 4rem;
+        font-size: 3rem;
         display: flex;
         justify-content: center;
     }
@@ -1048,12 +1067,12 @@ main {
 @media screen and (max-width:320px) {
     /*styling our show menu button*/
     .show-menu {
-        /* background: #342a2a;
+        background: #342a2a;
         display: flex;
         cursor: pointer;
         padding: 10px 0;
         justify-content: center;
-        font-size: 1.25rem; */
+        font-size: 1.25rem;
     }
     /*hiding our navigation*/
     .navigation {
@@ -1075,104 +1094,109 @@ main {
     }
     /*removing border left from the pseudo class*/
     .navigation li:not(:first-child) {
-        /* border: 0; */
+        border: 0;
     }
     /*giving margin to list item, excluding last list item*/
     .navigation li:not(:last-child) {
-        /* margin: 2px 0; */
+        margin: 2px 0;
     }
     /*styling hover*/
     .navigation li:hover {
-        /* background: #1a1a1a;
-        flex: 1; */
+        background: #1a1a1a;
+        flex: 1;
     }
     main {
-        /* width: 100%;
-        height: 100vh;
+        width: 100%;
+        height: 120vh;
         background-image: url(img/starry-sky-2051448_1920.jpg);
         background-size: cover;
         background-position: top center;
-        background-repeat: no-repeat; */
+        background-repeat: no-repeat;
     }
     .todayWeather {
         height: 45vh;
     }
     .todayWeather h1 {
         /* font-family: 'Arimo', sans-serif; */
-        /* padding-top: 2rem;
-        padding-bottom: 2rem; */
+        padding-top: 1rem;
+        padding-bottom: 1rem;
         /* color: white; */
         font-size: 2.5rem;
         /* text-align: center; */
     }
     .wrapper {
         /* margin: 0 auto; */
-        width: 25rem;
-        height: 18rem;
+        width: 20rem;
+        height: 20rem;
         /* background-color: white;
-        opacity: 0.5;
+        opacity: 0.8;
         border-radius: 20px;
         position: relative; */
     }
     .wrapperContent {
         /* position: relative; */
-        top: -17rem;
+        top: -20rem;
     }
     .wrapperContent p:nth-child(1) {
-        /* padding-top: 0; */
+        padding-top: 0;
     }
     .wrapperContent p:nth-child(4) {
         font-size: 3.5rem;
     }
     .wrapperContent p:nth-child(5) {
-        /* padding-bottom: 0; */
+        padding-bottom: 0;
     }
     .wrapperContent p {
         /* font-family: 'Arimo', sans-serif; */
         /* margin-top: 0; */
         /* text-align: center; */
-        font-size: 2rem;
+        font-size: 1.5rem;
         /* color: black;
         font-weight: bold */
     }
-    .img {
-        height: 4.5rem;
+    div .img {
+        display: flex;
+        justify-content: center;
+    }
+    .fiveDaysWeather div>img {
+        height: 5rem;
     }
     .fiveDaysWeather {
-        /* padding-top: 0;
+        padding-top: 0;
         padding-bottom: 0;
         margin-left: 0;
         margin-right: 0;
         background-color: #fff;
-        opacity: 0.5;
+        opacity: 0.8;
         width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: space-around; */
+        justify-content: space-around;
     }
     .firstDay,
     .secondDay,
     .thirdDay,
     .fourthDay,
     .fifthDay {
-        /* padding-top: .5rem;
+        padding-top: 0;
         display: flex;
         justify-content: space-around;
-        align-items: center; */
+        align-items: center;
+        height: 6rem;
     }
     .picture {
         color: red;
-        height: 4rem;
+        height: 0;
     }
     .fiveDaysWeather p {
         /* font-family: 'Arimo', sans-serif;
         font-weight: bold;
         color: black; */
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
     .fiveDaysWeather .degrees {
         font-size: 3rem;
-        /* display: flex;
-        justify-content: center; */
+        display: flex;
+        justify-content: center;
     }
 }
