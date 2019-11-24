@@ -11,23 +11,35 @@
     />
 
     <link rel="stylesheet" href="style.css" />
-    <script src="app.js"></script>
   </head>
-  <!-- getWeather(document.getElementById('miau7878')) -->
+
   <body>
     <main>
-      <nav>
-        <input id="search" type="text" placeholder="City" />
-        <button onclick="getWeather(document.getElementById('search').value)">
-          Search for city
-        </button>
-        <ul>
-          <li><a class="active" href="#home">Warsaw</a></li>
-          <li><a href="#news">Berlin</a></li>
-          <li><a href="#contact">Paris</a></li>
-          <li><a href="#about">New York</a></li>
+      <!-- <nav>
+            <!-- <input type="text" placeholder="City"> -->
+      <!-- <ul>
+
+
+            <li><a class="active" href="#home">Warsaw</a></li>
+            <li><a href="#news">Berlin</a></li>
+            <li><a href="#contact">Paris</a></li>
+            <li><a href="#about">New York</a></li>
+
         </ul>
-      </nav>
+        </nav> -->-->
+      <div class="nav">
+        <label for="show-menu" class="show-menu">Show Menu</label>
+        <input type="checkbox" id="show-menu" />
+        <ul class="navigation">
+          <li><a href="#">Paris</a></li>
+          <li><a href="#">New York</a></li>
+          <li><a href="#">Berlin</a></li>
+          <li><a href="#">Warsaw</a></li>
+          <li>
+            <a href="#">Moscow</a>
+          </li>
+        </ul>
+      </div>
 
       <section class="todayWeather">
         <h1>Weather</h1>
@@ -37,8 +49,10 @@
 
           <p>Cracow</p>
 
-          <div class="img"></div>
-          <p id="temp">35 &deg C</p>
+          <div class="img">
+            <img src="/icons/10d@2x.png" alt="" srcset="" />
+          </div>
+          <p>35 &deg C</p>
 
           <p>Sunny</p>
         </div>
@@ -46,31 +60,42 @@
       <section class="fiveDaysWeather">
         <div class="firstDay">
           <p>Monday</p>
-          <div class="picture"></div>
+          <div class="picture">
+            <img src="/icons/03dpoprawione@2x.png" alt="" srcset="" />
+          </div>
           <p class="degrees">22 &deg C</p>
         </div>
 
         <div class="secondDay">
           <p>Tuesday</p>
-          <div class="picture"></div>
+          <div class="picture">
+            <img src="/icons/10d@2x.png" alt="" srcset="" />
+          </div>
           <p class="degrees">22 &deg C</p>
         </div>
         <div class="thirdDay">
           <p>Wednesday</p>
-          <div class="picture"></div>
+          <div class="picture">
+            <img src="/icons/10d@2x.png" alt="" srcset="" />
+          </div>
           <p class="degrees">22 &deg C</p>
         </div>
         <div class="fourthDay">
           <p>Thursday</p>
-          <div class="picture"></div>
+          <div class="picture">
+            <img src="/icons/10d@2x.png" lt="" srcset="" />
+          </div>
           <p class="degrees">22 &deg C</p>
         </div>
         <div class="fifthDay">
           <p>Friday</p>
-          <div class="picture"></div>
+          <div class="picture">
+            <img src="/icons/13d@2x.png" alt="" srcset="" />
+          </div>
           <p class="degrees">22 &deg C</p>
         </div>
       </section>
     </main>
+    <script src="app.js"></script>
   </body>
 </html>
