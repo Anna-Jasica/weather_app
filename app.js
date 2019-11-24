@@ -105,8 +105,6 @@ document.addEventListener("DOMContentLoaded", function () {
     getWeatherForNextDays("Cracow");
 });
 
-// my code
-
 async function getWeatherForNextDays(city) {
     let url = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
     const response = await fetch(url);
@@ -117,16 +115,21 @@ async function getWeatherForNextDays(city) {
 
     const degrees = document
         .getElementsByClassName("degrees")
+
     const dayNames = document
         .getElementsByClassName("dayName")
 
-    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const icons = document
+        .getElementsByClassName("icon")
 
-    for (let i = 0; i < degrees.length; i++) {
+
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    console.log(dailyWeather);
+    for (let i = 0; i < dayNames.length; i++) {
         degrees[i].innerHTML = dailyWeather[i].main.temp + "&deg C";
         const date = new Date(dailyWeather[i].dt * 1000);
         dayNames[i].innerHTML = days[date.getDay()];
-
+        icons[i].src = `http://openweathermap.org/img/wn/${dailyWeather[i].weather[0].icon}@2x.png`
     }
 
 }
