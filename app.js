@@ -86,6 +86,15 @@ document.addEventListener("DOMContentLoaded", function() {
     run();
   }
   navCities.forEach(navcity => navcity.addEventListener("click", showNavCity));
+  navCities.forEach(navcity => navcity.addEventListener("click", hideMenu));
+
+  function hideMenu() {
+    let x = document.getElementById("show-menu");
+    if (x.checked == true) {
+      x.checked = false;
+    }
+  }
+
   ////5 days weather forecast
   async function getWeatherForNextDays(city) {
     let url = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
