@@ -109,32 +109,18 @@ async function getWeatherForNextDays(city) {
   let url = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
   const response = await fetch(url);
   const weather = await response.json();
-
   console.log(weather);
-
-  // let today = new Date();
-
-  // let tomorrow = today.getDate() + 1;
-  // console.log(tomorrow);
-
-  // let dailyWeather;
-
-  // for (let i = 0; i < weather.length; i++) {
-  //   if (weather[i].dt_txt >= tomorrow) {
-  //     const dailyWeather = weather.list.filter(element => {
-  //       return element.dt_txt.includes("21:00");
-  //     });
-  //   }
-  // }
-
+  const today = new Date().getDate();
   const dailyWeather = weather.list.filter(element => {
-    return element.dt_txt.includes("15:00");
+    return (
+      new Date(element.dt * 1000).getDate() !== today &&
+      element.dt_txt.includes("15:00:00")
+    );
   });
+  console.log(dailyWeather);
 
   const degrees = document.getElementsByClassName("degrees");
-
   const dayNames = document.getElementsByClassName("dayName");
-
   const icons = document.getElementsByClassName("icon");
 
   const days = [
@@ -146,14 +132,35 @@ async function getWeatherForNextDays(city) {
     "Friday",
     "Saturday"
   ];
-  console.log(dailyWeather);
-  for (let i = 0; i < dayNames.length; i++) {
+
+  for (let i = 0; i < dayNames.length - 1; i++) {
     degrees[i].innerHTML = dailyWeather[i].main.temp + "&deg C";
     const date = new Date(dailyWeather[i].dt * 1000);
-    console.log(date);
     dayNames[i].innerHTML = days[date.getDay()];
     icons[
       i
     ].src = `http://openweathermap.org/img/wn/${dailyWeather[i].weather[0].icon}@2x.png`;
   }
+
+  const setLastDay = () => {
+    degrees[4].innerHTML =
+      weather.list[weather.list.length - 1].main.temp + "&deg C";
+    const date = new Date(weather.list[weather.list.length - 1].dt * 1000);
+    dayNames[4].innerHTML = days[date.getDay()];
+    icons[4].src = `http://openweathermap.org/img/wn/${
+      weather.list[weather.list.length - 1].weather[0].icon
+    }@2x.png`;
+  };
+
+  setLastDay();
+}
+
+const navCities = document.querySelectorAll(".navigation li");
+navCities.forEach(navcity => navcity.addEventListener("click", showNavCity));
+
+function showNavCity(e) {
+  console.log(e);
+  //Sets url myCity var to nav element innerHTML
+  const city = e.target.innerHTML;
+  getWeatherForNextDays(city);
 }
