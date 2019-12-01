@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const dailyWeather = weather.list.filter(element => {
       return (
         new Date(element.dt * 1000).getDate() !== today &&
-        element.dt_txt.includes("15:00:00")
+        element.dt_txt.includes("12:00:00")
       );
     });
 
@@ -123,6 +123,7 @@ document.addEventListener("DOMContentLoaded", function() {
     ];
 
     for (let i = 0; i < dayNames.length - 1; i++) {
+      console.log(dailyWeather[i]);
       degrees[i].innerHTML = Math.round(dailyWeather[i].main.temp) + "&deg C";
       const date = new Date(dailyWeather[i].dt * 1000);
       dayNames[i].innerHTML = days[date.getDay()];
