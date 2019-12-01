@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
   ////Get and set weather info
   const weather = async () => {
     //Retrieve weather data from API
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${myCity}&units=metric&appid=${apiKey}`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${myCity}&units=metric&appid=${apiKey}`;
     let response = await fetch(url);
     if (!response.ok) {
       throw new Error(response.status);
@@ -45,9 +45,9 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   const getNextFiveDays = function(startDate, daysNum) {
     //Returns an array with daysNum number of days from startDate
-    var xDays = [];
-    for (var i = 0; i <= daysNum; i++) {
-      var currentDate = new Date();
+    let xDays = [];
+    for (let i = 0; i <= daysNum; i++) {
+      let currentDate = new Date();
       currentDate.setDate(startDate.getDate() + i);
       xDays.push(getFullDay(currentDate));
     }
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const dates = {
     weekDay: getNextFiveDays()[0],
     day: today.getDate(),
-    month: today.getMonth(),
+    month: today.getMonth() + 1,
     year: today.getFullYear(),
     nextFiveDays: getNextFiveDays(today, 5)
   };
@@ -69,14 +69,14 @@ document.addEventListener("DOMContentLoaded", function() {
     cityHtml.innerHTML = city;
     //Insert date info into html
     currentDateHtml.innerHTML = `${dates.day}.${dates.month}.${dates.year}`;
-    for (var i = 0; i <= 6; i++) {
+    for (let i = 0; i <= 6; i++) {
       if (futureWeatherHtml[i]) {
         futureWeatherHtml[i].innerHTML = dates.nextFiveDays[i + 1];
       }
     }
     //Set img src for wrapper icon - day icons
     document.getElementById("image").src =
-      "http://openweathermap.org/img/wn/" + data[3] + "@2x.png";
+      "https://openweathermap.org/img/wn/" + data[3] + "@2x.png";
   };
   ////Navigation - set and display weather for clciked element
   const navCities = document.querySelectorAll(".navigation li a");
@@ -95,9 +95,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
-  ////5 days weather forecast
+   ////5 days weather forecast
   async function getWeatherForNextDays(city) {
-    let url = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
+    let url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
     const response = await fetch(url);
     const weather = await response.json();
     const today = new Date().getDate();
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function() {
       dayNames[i].innerHTML = days[date.getDay()];
       icons[
         i
-      ].src = `http://openweathermap.org/img/wn/${dailyWeather[i].weather[0].icon}@2x.png`;
+      ].src = `https://openweathermap.org/img/wn/${dailyWeather[i].weather[0].icon}@2x.png`;
     }
 
     const setLastDay = () => {
@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function() {
         Math.round(weather.list[weather.list.length - 1].main.temp) + "&deg C";
       const date = new Date(weather.list[weather.list.length - 1].dt * 1000);
       dayNames[4].innerHTML = days[date.getDay()];
-      icons[4].src = `http://openweathermap.org/img/wn/${
+      icons[4].src = `https://openweathermap.org/img/wn/${
         weather.list[weather.list.length - 1].weather[0].icon
       }@2x.png`;
     };
