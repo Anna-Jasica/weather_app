@@ -123,7 +123,6 @@ document.addEventListener("DOMContentLoaded", function() {
     ];
 
     for (let i = 0; i < dayNames.length - 1; i++) {
-      console.log(dailyWeather[i]);
       degrees[i].innerHTML = Math.round(dailyWeather[i].main.temp) + "&deg C";
       const date = new Date(dailyWeather[i].dt * 1000);
       dayNames[i].innerHTML = days[date.getDay()];
